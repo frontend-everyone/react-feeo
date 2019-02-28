@@ -1,0 +1,175 @@
+/*初始化*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, table {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+body {
+  font: normal 12px PingFangSC-Regular, "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "\5B8B\4F53", simsun, sans-serif;
+  -webkit-text-size-adjust: none;
+  -webkit-text-size-adjust: none; /*禁止浏览器字体大小调整*/
+  -webkit-font-smoothing: antialiased;
+}
+
+li {
+  list-style: none;
+}
+
+em, i, dfn, address {
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6, b {
+  font-weight: normal;
+  font-size: 12px;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+input, textarea, select {
+  outline: none;
+}
+
+input {
+  border: none 0;
+  text-indent: 5px;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+input:focus, a:focus, summary:focus, select:focus, textarea:focus, button:focus {
+  outline: none;
+}
+
+input:-webkit-autofill {
+  background-color: transparent;
+}
+
+input[type="button"], input[type="submit"], input[type="reset"] {
+  -webkit-appearance: none;
+}
+
+input::placeholder {
+  color: #DADADA;
+}
+
+textarea {
+  font-family: inherit;
+  resize: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+
+li, dd, a, dt, span {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a {
+  text-decoration: none;
+  color: #252525;
+}
+
+img {
+  vertical-align: middle;
+  -webkit-touch-callout: none; /* 禁止长按链接与图片弹出菜单 */
+}
+
+a img {
+  border: 0;
+}
+
+button {
+  background: none;
+  cursor: pointer;
+  border: none;
+  font: inherit;
+  padding: 0;
+}
+
+.clear:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.clear {
+  zoom: 1;
+}
+
+.fl {
+  display: inline;
+  float: left;
+}
+
+.fr {
+  display: inline;
+  float: right;
+}
+
+i {
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.none {
+  display: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.fs16 {
+  font-size: 16px;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.tc {
+  text-align: center;
+}
+
+.pt20 {
+  padding-top: 20px;
+}
+
+.pt50 {
+  padding-top: 50px;
+}
+
+.mrNone {
+  margin-right: 0 !important;
+}
+
+.gray {
+  color: #979797;
+}
+
+/*文字溢出隐藏*/
+.textOver {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: break-all;
+}
+

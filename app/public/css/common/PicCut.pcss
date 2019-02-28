@@ -1,0 +1,48 @@
+/**
+ * Created by Kirk liu on 2018/8/6.
+ */
+
+.imageUpload{
+  overflow: hidden;
+  .imageSelect{
+    width: 380PX;
+    float: left;
+  }
+  .imageSelect .imgCanvas{
+    width: 380PX;
+    height: 240PX;
+    background-color: #e9e9e9;
+    border: 1PX dashed #cccccc;
+    float: left;
+    overflow: hidden;
+  }
+  .imageSelect input{
+    display: none;
+  }
+  .imageSelect_button_select,.imageSelect_button_upload{
+    width: 180PX;
+    height: 46PX;
+    border: none;
+    background-color: #4fb4ff;
+    cursor: pointer;
+    float: left;
+    margin-top: 10PX;
+    color: #fff;
+    border-radius: 4PX;
+  }
+  .imageSelect_button_upload{
+    float: right;
+    background-color: #cccccc;
+    &.ok{
+      background-color: #4fb4ff;
+    }
+  }
+  .imageCutting{
+    width: 140PX;
+    height: 120PX;
+    background-color: #e9e9e9;
+    border: 1PX dashed #cccccc;
+    float: left;
+    margin-left: 10PX;
+  }
+}

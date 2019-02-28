@@ -1,0 +1,88 @@
+/**
+ * Created by Kirk liu on 2018/7/23.
+ */
+@keyframes loadEffectAnimation{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0.2;
+  }
+}
+.Loading {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  .loadEffect{
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%) scale(0.5) ;
+  }
+  .loadEffect i{
+    display: inline-block;
+    width: 30px;
+    height: 13px;
+    border-radius: 10px;
+    background:#8A898A;
+    border: 1px solid #ffffff;
+    position: absolute;
+    animation: loadEffectAnimation 1.04s ease infinite;
+  }
+  .loadEffect i:nth-child(1){
+    left: 0;
+    top: 50%;
+    margin-top:-5px;
+    animation-delay:0.13s;
+  }
+  .loadEffect i:nth-child(2){
+    left: 10px;
+    top: 20px;
+    transform: rotate(45deg);
+    animation-delay:0.26s;
+  }
+  .loadEffect i:nth-child(3){
+    left: 50%;
+    top: 10px;
+    margin-left: -15px;
+    transform: rotate(90deg);
+    animation-delay:0.39s;
+  }
+  .loadEffect i:nth-child(4){
+    top: 20px;
+    right:10px;
+    transform: rotate(135deg);
+    animation-delay:0.52s;
+  }
+  .loadEffect i:nth-child(5){
+    right: 0;
+    top: 50%;
+    margin-top:-5px;
+    transform: rotate(180deg);
+    animation-delay:0.65s;
+  }
+  .loadEffect i:nth-child(6){
+    right: 10px;
+    bottom:20px;
+    transform: rotate(225deg);
+    animation-delay:0.78s;
+  }
+  .loadEffect i:nth-child(7){
+    bottom: 10px;
+    left: 50%;
+    margin-left: -15px;
+    transform: rotate(270deg);
+    animation-delay:0.91s;
+  }
+  .loadEffect i:nth-child(8){
+    bottom: 20px;
+    left: 10px;
+    transform: rotate(315deg);
+    animation-delay:1.04s;
+  }
+}
