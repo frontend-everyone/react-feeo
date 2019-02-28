@@ -1,5 +1,7 @@
 # react multipage [简体中文](./README.zh-CN.md)
 
+react multipage , React + React-Router + Redux + Webpack4 + Babel7 + ES6 + Mock；
+
 ## version
 
 - react 16.8.3

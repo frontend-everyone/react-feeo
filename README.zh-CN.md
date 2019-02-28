@@ -1,5 +1,7 @@
 # React 多页面 [English](./README.md)
 
+react multipage , React + React-Router + Redux + Webpack4 + Babel7 + ES6 + Mock；
+
 ## 版本依赖
 
 - react 16.8.3
