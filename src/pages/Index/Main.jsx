@@ -4,7 +4,8 @@ import { apiRequest } from "@/services/api";
 
 class Main extends Component {
   state = {
-    name: "react-feeo"
+    name: "react-feeo",
+    list: []
   };
 
   async componentDidMount() {
@@ -15,17 +16,18 @@ class Main extends Component {
     };
 
     const response = await apiRequest.post("list", requestData);
+    this.setState({ list: response.list });
     console.log(response);
   }
 
-  asyncModuleHandle() {
-    import(/* webpackChunkName: "async-module" */ "./async-module").then(
-      ({ a }) => a("hello feeo")
+  mathHandle() {
+    import(/* webpackChunkName: "math" */ "../../../src/utils/math.js").then(
+      ({ math }) => math(1, 2)
     );
   }
 
   render() {
-    const { name } = this.state;
+    const { name, list } = this.state;
     return (
       <div>
         <div className="list">{name}</div>
@@ -40,9 +42,10 @@ class Main extends Component {
         <br />
         <a href="#/HooksRedux">Hooks-redux</a>
         <br />
-        <button onClick={() => this.asyncModuleHandle()}> async-module</button>
+        <button onClick={() => this.mathHandle()}>math</button>
         <br />
-        4545
+        {list.length &&
+          list.map((data, index) => <li key={index}>{data.title}</li>)}
       </div>
     );
   }

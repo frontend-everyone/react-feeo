@@ -1,4 +1,5 @@
 const mockjs = require("mockjs");
+const { successCallback } = require("./utils");
 
 const avatars = [
   "https://gw.alipayobjects.com/zos/rmsportal/WdGqmHpayyMjiEhcKoVE.png", // Alipay
@@ -50,18 +51,20 @@ const avatars = [
 
 // const { Random } = mockjs;
 module.exports = {
-  "POST /mock/api/list": mockjs.mock({
-    "records|96": [
-      {
-        "id|+1": 1,
-        title: "@ctitle(10,50)",
-        desc: "@ctitle(50,200)",
-        "covers|1": avatars,
-        "look|1-100000": 150,
-        "forward|1-100000": 150,
-        "state|0-2": 1,
-        date: '@date("MM-dd HH:mm")'
-      }
-    ]
-  })
+  "POST /mock/api/list": successCallback(
+    mockjs.mock({
+      "list|10": [
+        {
+          "id|+1": 1,
+          title: "@title(10,50)",
+          desc: "@title(50,200)",
+          "covers|1": avatars,
+          "look|1-100000": 150,
+          "forward|1-100000": 150,
+          "state|0-2": 1,
+          date: '@date("MM-dd HH:mm")'
+        }
+      ]
+    })
+  )
 };
